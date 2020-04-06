@@ -27,5 +27,26 @@ h3{
 }
 li{
   margin-left: 50px;
-
+}
+.info{
+  background-color: aqua;
+}
+.oculto{
+  display: none;
+}
+.title{
+  font-size: 32px;
+  margin: 0 auto;
+  text-align: center;
+}
+.casos{
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+}
+.global-reporte{
+  padding: 15px;
+}
+.brasil-reporte{
+  padding: 15px;
 }
