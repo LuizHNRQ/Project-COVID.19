@@ -1,52 +1,65 @@
-*{
+* {
   margin: 0;
   padding: 0;
 }
-body{
+
+body {
   font-family: 'Montserrat', sans-serif;
   /* font-family: 'Source Sans Pro', sans-serif; */
   /* font-family: 'Merriweather', serif; */
   background-color: lightgrey;
 }
-.container{
+
+.container {
   width: 1400px;
   margin: 0 auto;
   text-align: start;
   background-color: white;
   height: 900px;
 }
-h1{
+
+h1 {
   padding: 50px;
 }
-h2{
+
+h2 {
   padding: 20px;
 }
-h3{
+
+h3 {
   padding: 10px;
   margin-left: 20px;
 }
-li{
+
+li {
   margin-left: 50px;
 }
-.info{
+
+.info {
   background-color: aqua;
 }
-.oculto{
-  display: none;
+
+.oculto {
+  /*display: none*/
+  ;
 }
-.title{
+
+.title {
   font-size: 32px;
   margin: 0 auto;
   text-align: center;
 }
-.casos{
+
+.casos {
   display: flex;
   justify-content: space-evenly;
   flex-direction: column;
 }
-.global-reporte{
+
+.global-reporte {
   padding: 15px;
 }
-.brasil-reporte{
+
+.brasil-reporte {
   padding: 15px;
 }
