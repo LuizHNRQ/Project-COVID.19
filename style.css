@@ -7,7 +7,7 @@ body {
   font-family: 'Montserrat', sans-serif;
   /* font-family: 'Source Sans Pro', sans-serif; */
   /* font-family: 'Merriweather', serif; */
-  background-color: lightgrey;
+  background-color: rgb(37, 37, 37);
 }
 
 .container {
@@ -18,12 +18,21 @@ body {
   height: 900px;
 }
 
+.verde {
+  color: green;
+}
+
+.vermelho {
+  color: red;
+}
+
 h1 {
   padding: 50px;
 }
 
 h2 {
   padding: 20px;
+  text-align: center;
 }
 
 h3 {
@@ -33,33 +42,91 @@ h3 {
 
 li {
   margin-left: 50px;
+  list-style: none;
+  padding: 5px;
 }
 
 .info {
-  background-color: aqua;
+  font-size: 20px;
+  margin-right: 15px;
 }
 
 .oculto {
-  /*display: none*/
-  ;
+  display: none !important;
 }
 
 .title {
+  background-color: rgb(217, 235, 217);
   font-size: 32px;
   margin: 0 auto;
   text-align: center;
+  border-bottom: rgb(104, 104, 104) 1px solid;
 }
 
 .casos {
   display: flex;
   justify-content: space-evenly;
-  flex-direction: column;
+  flex-direction: row;
+  padding-bottom: 60px;
+  border-bottom: rgb(104, 104, 104) 1px solid;
 }
 
 .global-reporte {
   padding: 15px;
+  display: flex;
 }
 
 .brasil-reporte {
   padding: 15px;
+  display: flex;
+}
+
+.casos {
+
+  margin-top: 80px;
+}
+
+#pesq-pais {
+  margin-top: 20px;
+}
+
+.formulario {
+  text-align: center;
+  padding: 20px;
+}
+
+#pesquisa {
+  padding: 10px 20px;
+}
+
+#s-country {
+  padding: 10px 100px 10px 0;
+}
+
+.pais-reporte {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  margin-top: 100px;
+  padding: 0;
+
+  list-style: none;
+}
+
+.centro {
+  display: flex;
+}
+
+footer {
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  bottom: 0;
+}
+
+footer h4 a {
+  color: #1db954;
 }

@@ -33,8 +33,8 @@ function fetchData() {
       console.log(result.Countries);
       global.innerHTML = `
     <li><span class ="info" >Casos Confirmados:</span>${result.Global.TotalConfirmed} </li>
-    <li><span class ="info" >Pacientes recuperados:</span>${result.Global.TotalRecovered}</li>
-    <li><span class ="info" >Mortes:</span>${result.Global.TotalDeaths}</li>
+    <li><span class ="info verde" >Pacientes recuperados:</span>${result.Global.TotalRecovered}</li>
+    <li><span class ="info vermelho" >Mortes:</span>${result.Global.TotalDeaths}</li>
     </ul>
     `;
     })
@@ -54,8 +54,8 @@ fetch(
     const r = result[1];
     brasil.innerHTML = `
     <li><span class ="info" >Casos Confirmados:</span>${r.Confirmed}</li>
-    <li><span class ="info" >Pacientes recuperados:</span>${r.Recovered}</li>
-    <li><span class ="info" >Mortes:</span>${r.Deaths}</li>
+    <li><span class ="info verde" >Pacientes recuperados:</span>${r.Recovered}</li>
+    <li><span class ="info vermelho" >Mortes:</span>${r.Deaths}</li>
     </ul>
     `;
   })
@@ -74,12 +74,11 @@ form.addEventListener('submit', function (e) {
     .then((response) => response.json())
     .then((result) => {
       console.log(result);
-      console.log('aqui->>>>', result[1]);
       const r = result[1];
       searchedCountry.innerHTML = `
     <li><span class ="info" >Casos Confirmados:</span>${r.Confirmed}</li>
-    <li><span class ="info" >Pacientes recuperados:</span>${r.Recovered}</li>
-    <li><span class ="info" >Mortes:</span>${r.Deaths}</li>
+    <li><span class ="info verde" >Pacientes recuperados:</span>${r.Recovered}</li>
+    <li><span class ="info vermelho" >Mortes:</span>${r.Deaths}</li>
     </ul>
     `;
     })

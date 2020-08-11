@@ -16,8 +16,8 @@
     <div class="title">
       <h1>Casos de Covid-19 no Mundo </h1>
     </div>
+
     <div class="casos">
-      <h2>Casos:</h2>
       <div class="global-reporte">
         <h3>Global:</h3>
         <ul class="global-dados">
@@ -36,31 +36,39 @@
         </ul>
       </div>
 
+    </div>
 
+    <h2 id="pesq-pais">Pesquisa por pais</h2>
 
-      <h2>Pesquisa por pais</h2>
+    <form class="formulario">
+      <input type="text" placeholder="nome do pais desejado..." id="s-country">
+      <input type="submit" value="Pesquisar" id="pesquisa">
+    </form>
 
-      <div class="pais-reporte oculto">
-        <h3>Brasil:</h3>
+    <div class="pais-reporte oculto">
+      <div class="centro">
+        <h3>Nome do Pais:</h3>
         <ul class="search-data">
           <li id="brasil-casos">n</li>
           <li id="brasil-recuperados">n</li>
           <li id="brasil-mortes">n</li>
         </ul>
       </div>
+    </div>
 
 
-    </div> <!-- fim do container -->
-
-    <form>
-      <input type="text" placeholder="digite o nome do pais desejado..." id="s-country">
-      <input type="submit" id="enviar">
-    </form>
+    <!-- fim do container -->
 
 
 
     <script src="./scripts/request.js"></script>
     <script src="./scripts/app.js"></script>
+
+
 </body>
+
+<footer>
+  <h4>Desenvolvido por<a href="https://github.com/LuizHNRQ">LuizHNRQ</a></h4>
+</footer>
 
 </html>
