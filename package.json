@@ -1,9 +1,9 @@
 {
-  "name": "Project-COVID.19",
+  "name": "projectcovid",
   "version": "1.0.0",
   "description": "Project based in HTML, CSS and Javacript that uses covid19api.com to request data.",
   "scripts": {
-    "start": "serve",
+    "start": "serve"
   },
   "dependencies": {
     "serve": "^10.0.1"
