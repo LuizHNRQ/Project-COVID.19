@@ -54,6 +54,7 @@ function fetchCustomData(country, element) {
     })
     .catch((error) => {
       console.log('error', error);
+      searchedCountry.classList.add('oculto');
       showCountry.innerHTML = `País não Encontrado`;
     });
 }
@@ -70,7 +71,9 @@ form.addEventListener('submit', function (e) {
 
   if (searchByCountry.value.length <= 3) {
     showCountry.innerHTML = `Entrada Inválida`;
+    searchedCountry.classList.add('oculto');
   } else {
+    searchedCountry.classList.remove('oculto');
     showCountry.innerHTML = `${searchByCountry.value}`;
     fetchCustomData(searchByCountry.value, searchedCountry);
   }
