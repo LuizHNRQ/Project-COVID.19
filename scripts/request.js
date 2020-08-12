@@ -26,8 +26,6 @@ function fetchData() {
   fetch('https://api.covid19api.com/summary', requestOptions)
     .then((response) => response.json())
     .then((result) => {
-      console.log(result);
-      console.log(result.Countries);
       global.innerHTML = `
     <li><span class ="info" >Casos Confirmados:</span>${result.Global.TotalConfirmed} </li>
     <li><span class ="info verde" >Pacientes recuperados:</span>${result.Global.TotalRecovered}</li>
@@ -45,8 +43,8 @@ function fetchCustomData(country, element) {
   )
     .then((response) => response.json())
     .then((result) => {
-      console.log(result);
-      const r = result[1];
+      const r = result[0];
+
       element.innerHTML = `
     <li><span class ="info" >Casos Confirmados:</span>${r.Confirmed}</li>
     <li><span class ="info verde" >Pacientes recuperados:</span>${r.Recovered}</li>
@@ -54,7 +52,10 @@ function fetchCustomData(country, element) {
     </ul>
     `;
     })
-    .catch((error) => console.log('error', error));
+    .catch((error) => {
+      console.log('error', error);
+      showCountry.innerHTML = `País não Encontrado`;
+    });
 }
 
 //call the API
@@ -66,7 +67,11 @@ fetchCustomData('brazil', brasil);
 form.addEventListener('submit', function (e) {
   e.preventDefault();
   exibInfo.classList.remove('oculto');
-  showCountry.innerHTML = `${searchByCountry.value}`;
 
-  fetchCustomData(searchByCountry.value, searchedCountry);
+  if (searchByCountry.value.length <= 3) {
+    showCountry.innerHTML = `Entrada Inválida`;
+  } else {
+    showCountry.innerHTML = `${searchByCountry.value}`;
+    fetchCustomData(searchByCountry.value, searchedCountry);
+  }
 });
